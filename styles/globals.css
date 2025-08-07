@@ -1,3 +1,4 @@
+/* stylelint-disable rule-empty-line-before */
 /* Глобальные стили для проекта, их можно дополнять и менять по желанию */
 
 *,
@@ -8,7 +9,7 @@
 
 html {
   font-family: 'IBM Plex mono', sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 400;
   font-style: normal;
   block-size: 100%;
