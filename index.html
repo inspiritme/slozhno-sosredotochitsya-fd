@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="color-scheme" content="dark light" />
     <title>Сложно сосредоточиться</title>
-    <link rel="stylesheet" href="fonts/fonts.css" />
-    <link rel="stylesheet" href="styles/globals.css" />
+    <link rel="stylesheet" href="./fonts/fonts.css" />
+    <link rel="stylesheet" href="./styles/globals.css" />
     <link rel="stylesheet" href="./styles/variables.css" />
     <link rel="stylesheet" href="./styles/style.css" />
     <link rel="stylesheet" href="./styles/dark.css" />
@@ -58,11 +58,17 @@
           </li>
         </ul>
       </nav>
-      <h1 class="header__title">no focus</h1>
-      <p class="title-decor header__text">
-        Что делать, когда не можешь делать ничего Или почему нам так сложно
-        сконцентрироваться, особенно когда очень надо
-      </p>
+      <h1 class="header__title title">no focus</h1>
+      <div class="title-decor header__text">
+        <p>Что делать, когда не можешь делать ничего</p>
+        <p>
+          Или почему нам так сложно
+          сконцентрироваться, особенно когда очень надо
+        </p>
+      </div>
+      <!-- <div class="header__indicator" aria-hidden="true">
+        <span class="header__indicator-text">Rec</span>
+      </div> -->
     </header>
     <main>
       <section class="section-focus">
@@ -259,5 +265,8 @@
         </div>
       </section>
     </main>
+    <footer class="footer title decorated-zone">
+      <div class="footer__text">focus</div>
+    </footer>
   </body>
 </html>

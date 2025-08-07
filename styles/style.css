@@ -1,8 +1,5 @@
+/* stylelint-disable rule-empty-line-before */
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-
-* {
-  /* outline: 1px solid red; */
-}
 
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
@@ -20,30 +17,36 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-color: var(--bg-cover);
-  /* margin-left: -10px; */
-  /* min-height: 688px; */
+  /* margin-left: -1px; */
+  min-inline-size: 100dvi;
+  /* justify-content: center; */
+  /* outline: 1px solid green; */
 }
 
 .header {
   grid-area: header;
-  min-block-size: 648px;
-  block-size: calc(100vb - 40px);
 
   display: grid;
   grid-template-rows: 1fr min-content 1fr;
+  grid-template-columns: repeat(2, 1fr);
   margin-block-end: 40px;
+  /* outline: 1px solid red; */
+
+  min-block-size: calc(668px - 20px);
+  block-size: 648px;
 }
 
 .header__indicator {
   position: absolute;
-  right: 25px;
+  right: 35px;
+  top: 0;
 }
 
 .header__indicator-text {
   position: relative;
   text-transform: uppercase;
   color: var(--accent-color);
-  left: -6px;
+  left: 0;
 }
 
 .header__indicator-text::after {
@@ -55,7 +58,7 @@
   box-shadow: 0 0 4px 2px var(--accent-color);
   position: absolute;
   top: 50%;
-  right: -25px;
+  right: -30px;
   transform: translate(-50%, -50%);
 }
 
@@ -64,6 +67,7 @@
   justify-content: end;
   grid-column: 2;
   align-items: center;
+  /* outline: 1px solid red; */
 }
 
 .header__theme-menu-list {
@@ -107,17 +111,27 @@
 }
 
 .header__title {
+  align-self: start;
+}
+
+.title {
   font-weight: 700;
   font-style: bold;
   font-size: var(--title-clamp-small);
   line-height: 83%;
   text-shadow: 4px 4px 0 var(--accent-color);
   color: var(--header-color);
-  align-self: start;
 }
 
 .header__text {
   align-self: center;
+  /* text-wrap: balance; */
+}
+
+.header__text p {
+  hyphens: auto;
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 .title-decor {
@@ -185,11 +199,12 @@ main {
 
 .gallery {
   display: grid;
+  /* gap: var(--page-clamp-padding); */
 }
 
 .gallery__item {
   height: 100%;
-  width: 100%;
+  /* width: 100vw; */
   object-fit: cover;
   display: block;
 }
@@ -201,9 +216,21 @@ main {
   display: block;
 }
 
-@media (min-width: 768px) {
+.footer {
+  grid-area: footer;
+  height: 100dvh;
+  /* outline: 1px solid red; */
+  display: grid;
+  margin-block-start: 40px;
+  justify-content: center;
+}
 
-  .header__title {
+.footer__text {
+  align-self: center;
+}
+
+@media (min-width: 768px) {
+  .title {
     font-size: var(--title-clamp-large);
   }
 }
