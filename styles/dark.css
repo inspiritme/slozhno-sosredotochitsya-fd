@@ -8,4 +8,14 @@
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
+  --bg-cover: url(../images/cover-image-dark.png);
+  --bg-color: #000;
+  --accent-color: rgb(255 0 112 / 1);
+  --text-color: rgb(241 178 206 / 1);
+  --focus-color: rgb(219 0 255 / 1);
+  --main-color: rgb(255 0 112 / 1);
+  --title-clamp-small: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  --title-clamp-large: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  --page-clamp-padding: clamp(0.625rem, 0.0286rem + 2.5445vw, 1.25rem);
+  --main-clamp-gap: clamp(2.5rem, 1.3073rem + 5.0891vw, 3.75rem);
 }
