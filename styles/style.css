@@ -4,12 +4,12 @@
   /* outline: 2px solid orange; */
 }
 .page {
-  background-image: var(--bg-cover);
+  background-image: var(--bg-cover, url(../images/cover-image-dark.png));
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
-  background-color: var(--bg-color);
+  background-color: var(--bg-color, #000);
   overflow: auto;
 }
 
@@ -17,7 +17,11 @@
   position: relative;
   display: grid;
   grid-template-rows: 1fr min-content 1fr;
-  padding: var(--page-clamp-padding);
+  padding: var(
+    --page-clamp-padding,
+    clamp(0.625rem, 0.0286rem + 2.5445vw, 1.25rem),
+    clamp(0.625rem, 0.0286rem + 2.5445vw, 1.25rem)
+  );
   font-size: 18px;
   min-block-size: 668px;
   block-size: 100dvh;
@@ -25,9 +29,15 @@
 
 .header__rec {
   position: absolute;
-  top: var(--page-clamp-padding);
-  right: calc(25px + var(--page-clamp-padding));
-  color: var(--accent-color);
+  top: var(
+    --page-clamp-padding,
+    clamp(0.625rem, 0.0286rem + 2.5445vw, 1.25rem)
+  );
+  right: calc(
+    25px +
+      var(--page-clamp-padding, clamp(0.625rem, 0.0286rem + 2.5445vw, 1.25rem))
+  );
+  color: var(--accent-color, rgb(255 0 112 / 1));
   text-transform: uppercase;
 }
 
@@ -39,8 +49,8 @@
   width: 9px;
   height: 9px;
   border-radius: 50%;
-  box-shadow: 0 0 4px 2px var(--accent-color);
-  background-color: var(--accent-color);
+  box-shadow: 0 0 4px 2px var(--accent-color, rgb(255 0 112 / 1));
+  background-color: var(--accent-color, rgb(255 0 112 / 1));
   transform: translate(-50%, -50%);
 }
 
@@ -60,7 +70,7 @@
 .header__theme-menu-button {
   border: none;
   padding: 2px 13px;
-  color: var(--main-color);
+  color: var(--main-color, rgb(255 0 112 / 1));
   text-transform: lowercase;
   background-color: transparent;
   appearance: none;
@@ -68,7 +78,7 @@
 
 .header__theme-menu-button_active {
   pointer-events: none;
-  outline: 1px solid var(--main-color);
+  outline: 1px solid var(--main-color, rgb(255 0 112 / 1));
 }
 
 .decorated-zone {
@@ -78,32 +88,47 @@
 .decorated-zone:before {
   content: '';
   position: absolute;
-  top: var(--page-clamp-padding);
-  right: var(--page-clamp-padding);
+  top: var(
+    --page-clamp-padding,
+    clamp(0.625rem, 0.0286rem + 2.5445vw, 1.25rem)
+  );
+  right: var(
+    --page-clamp-padding,
+    clamp(0.625rem, 0.0286rem + 2.5445vw, 1.25rem)
+  );
   width: 25px;
   height: 25px;
-  border-inline-end: 1px solid var(--main-color);
-  border-block-start: 1px solid var(--main-color);
+  border-inline-end: 1px solid var(--main-color, rgb(255 0 112 / 1));
+  border-block-start: 1px solid var(--main-color, rgb(255 0 112 / 1));
 }
 
 .decorated-zone:after {
   content: '';
   position: absolute;
-  bottom: var(--page-clamp-padding);
-  left: var(--page-clamp-padding);
+  bottom: var(
+    --page-clamp-padding,
+    clamp(0.625rem, 0.0286rem + 2.5445vw, 1.25rem)
+  );
+  left: var(
+    --page-clamp-padding,
+    clamp(0.625rem, 0.0286rem + 2.5445vw, 1.25rem)
+  );
   width: 25px;
   height: 25px;
-  border-inline-start: 1px solid var(--main-color);
-  border-block-end: 1px solid var(--main-color);
+  border-inline-start: 1px solid var(--main-color, rgb(255 0 112 / 1));
+  border-block-end: 1px solid var(--main-color, rgb(255 0 112 / 1));
 }
 
 .title {
-  color: var(--focus-color);
+  color: var(--focus-color, rgb(219 0 255 / 1));
   font-weight: 700;
-  font-size: var(--title-clamp-small);
+  font-size: var(
+    --title-clamp-small,
+    clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem)
+  );
   font-style: bold;
   line-height: 83%;
-  text-shadow: 4px 4px 0 var(--accent-color);
+  text-shadow: 4px 4px 0 var(--accent-color, rgb(255 0 112 / 1));
 }
 
 .header__text {
@@ -120,7 +145,7 @@
   font-size: 1.125rem;
   font-style: bold;
   line-height: 23.4px;
-  background-color: var(--accent-color);
+  background-color: var(--accent-color, rgb(255 0 112 / 1));
   margin-block-end: 10px;
 }
 
@@ -129,14 +154,20 @@
 }
 
 .main {
-  padding: var(--page-clamp-padding);
+  padding: var(
+    --page-clamp-padding,
+    clamp(0.625rem, 0.0286rem + 2.5445vw, 1.25rem)
+  );
   padding-top: 0;
   padding-bottom: 0;
-  margin-block: var(--main-clamp-gap);
+  margin-block: var(
+    --main-clamp-gap,
+    clamp(2.5rem, 1.3073rem + 5.0891vw, 3.75rem)
+  );
 }
 
 .section {
-  color: var(--text-color);
+  color: var(--text-color, rgb(241 178 206 / 1));
   font-weight: 400;
   font-size: 18px;
   font-style: normal;
@@ -155,7 +186,7 @@
 .link-effect {
   outline: none;
   text-decoration: none;
-  text-shadow: 2px 2px 1px var(--accent-color);
+  text-shadow: 2px 2px 1px var(--accent-color, rgb(255 0 112 / 1));
 }
 
 .link-effect:hover {
@@ -169,11 +200,11 @@
 
 .link-effect:focus-visible {
   border-block-end: 0;
-  outline: 1px solid var(--main-color);
+  outline: 1px solid var(--main-color, rgb(255 0 112 / 1));
 }
 
 .header__theme-menu-button:hover {
-  outline: 1px solid var(--main-color);
+  outline: 1px solid var(--main-color, rgb(255 0 112 / 1));
   border: none;
   filter: opacity(0.5);
 }
@@ -184,12 +215,12 @@
 }
 
 .header__theme-menu-button:focus-visible {
-  border-block-end: 1px solid var(--main-color);
+  border-block-end: 1px solid var(--main-color, rgb(255 0 112 / 1));
 }
 
 .section__title {
   margin-block-end: 20px;
-  color: var(--main-color);
+  color: var(--main-color, rgb(255 0 112 / 1));
   font-size: 18px;
 }
 
@@ -197,11 +228,17 @@
 }
 
 .gallery__title {
-  margin-block-end: var(--page-clamp-padding);
+  margin-block-end: var(
+    --page-clamp-padding,
+    clamp(0.625rem, 0.0286rem + 2.5445vw, 1.25rem)
+  );
 }
 .gallery-list {
   display: grid;
-  gap: var(--page-clamp-padding);
+  gap: var(
+    --page-clamp-padding,
+    clamp(0.625rem, 0.0286rem + 2.5445vw, 1.25rem)
+  );
 }
 
 .gallery__item {
@@ -221,7 +258,10 @@
   display: grid;
   justify-content: center;
   height: 100dvh;
-  padding: var(--page-clamp-padding);
+  padding: var(
+    --page-clamp-padding,
+    clamp(0.625rem, 0.0286rem + 2.5445vw, 1.25rem)
+  );
 }
 
 .footer__text {
@@ -230,7 +270,10 @@
 
 @media (width >= 768px) {
   .title {
-    font-size: var(--title-clamp-large);
+    font-size: var(
+      --title-clamp-large,
+      clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem)
+    );
   }
 
   .header {
