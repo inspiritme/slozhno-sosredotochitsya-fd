@@ -3,11 +3,15 @@
   --bg-color: #fff;
   --focus-color: rgba(255 194 230 / 1);
   --text-color: rgba(53 52 48 / 1);
+  --article-title-color: rgba(53 52 48 / 1);
   --accent-color: rgba(255 141 203 / 1);
   --main-color: rgba(53 52 48 / 1);
 }
 .theme-light .header__rec {
   display: none;
+}
+.theme-light .header__theme-menu-button:hover {
+  outline-color: rgba(50 49 45 / 0.4);
 }
 
 @media (prefers-color-scheme: light) {
@@ -16,10 +20,14 @@
     --bg-color: #fff;
     --focus-color: rgba(255 194 230 / 1);
     --text-color: rgba(53 52 48 / 1);
+    --article-title-color: rgba(53 52 48 / 1);
     --accent-color: rgba(255 141 203 / 1);
     --main-color: rgba(53 52 48 / 1);
   }
   .header__rec {
     display: none;
+  }
+  .header__theme-menu-button:hover {
+    outline-color: rgba(50 49 45 / 0.4);
   }
 }
