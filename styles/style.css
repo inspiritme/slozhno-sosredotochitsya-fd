@@ -165,8 +165,9 @@
   color: var(--main-color, rgb(255 0 112 / 1));
   font-size: 18px;
 }
-.section__container > p {
-  margin-block-end: 20px;
+.section__container {
+  display: grid;
+  gap: 20px;
 }
 .section__article {
   display: grid;
@@ -180,12 +181,6 @@
 }
 .section__article:has(.article-list) {
   gap: 20px;
-}
-.article-list__item h4 {
-  margin-block-end: 10px;
-}
-.section__article:not(:last-child) {
-  margin-block-end: 20px;
 }
 .title-regular {
   font-weight: 400;
@@ -233,12 +228,12 @@
 .footer {
   display: grid;
   justify-content: center;
-  block-size: 100vh;
-  min-block-size: 668px;
   padding: var(
     --page-clamp-padding,
     clamp(0.625rem, 0.0286rem + 2.5445vw, 1.25rem)
   );
+  block-size: 100vh;
+  min-block-size: 668px;
 }
 .footer__text {
   align-self: center;
